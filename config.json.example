@@ -1,5 +1,5 @@
 {
-  "port": "127.0.0.1:8080",
+  "port": ":8080",
   "password":"",
   "max_vault": 100,
   "max_vault_size": 100
