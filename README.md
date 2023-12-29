@@ -17,7 +17,11 @@ cp config.json.example config.json
 3. Build and start the docker 
 ```
 docker build -t passctl .
-docker run -d -v $PWD/config.json:/app/config.json -v $PWD/db:/app/db -p [local port]:8080 passctl 
+docker run -d -v $PWD/config.json:/app/config.json \
+              -v $PWD/db:/app/db \
+              -p [local port]:8080 \
+              --restart unless-stopped \
+              passctl 
 ```
 
 ### Configuration 
